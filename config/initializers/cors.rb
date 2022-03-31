@@ -7,8 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    # クライアントがわかっている場合は指定する
-    origins '*'
+    origins 'http://localhost:18080'
 
     resource '*',
              headers: :any,
